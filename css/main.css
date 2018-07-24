@@ -4,7 +4,7 @@
 	top: 10px;
 	bottom: 30%;
 	left: 10px;
-	right: 50%;
+	right: 60%;
 	padding: 10px 10px 10px 10px;
 	border: 1px solid black;
 }
@@ -13,7 +13,7 @@
 	position: absolute;
 	top: 10px;
 	bottom: 30%;
-	left: 50%;
+	left: 40%;
 	right: 10px;
 	padding: 10px 10px 10px 10px;
 	border: 1px solid black;
@@ -27,4 +27,28 @@
 	right: 10px;
 	padding: 10px 10px 10px 10px;
 	border: 1px solid black;
+}
+#view1-svg
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+#view2-svg
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+#view3-svg
+{
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 }
