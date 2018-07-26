@@ -14,12 +14,12 @@ var view1 =
 		{
 			return $("#view1-svg").width();
 		});
-		var projection = d3.geoMercator()
+		var projection = d3.geo.mercator()
 		.center([116.46, 40.25])
-		.scale(12500)
+		.scale(14000)
 		.translate([svg.style('width').replace("px", "") / 2, svg.style('height').replace("px", "") / 2]);
 
-		var path = d3.geoPath().projection(projection);
+		var path = d3.geo.path().projection(projection);
 
 		d3.json("data/beijing.json", function(error, root)
 		{

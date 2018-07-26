@@ -1,6 +1,8 @@
 var pos;
 var selected;
 var data;
+var startyear = 0;
+var endyear = 364;
 var days = new Array();
 days[1] = 31;
 days[2] = 28;
@@ -76,7 +78,10 @@ function initialize()
 			for(var i=0;i<d.length;i++)
 				if(pollution.indexOf(d[i].type) > -1)
 					for(var j=0;j<35;j++)
-						data[t][parseInt(d[i].hour)][pollution.indexOf(d[i].type)][j] = parseInt(d[i][names[j]]);
+					{
+						if(d[i][names[j]]!="")
+							data[t][parseInt(d[i].hour)][pollution.indexOf(d[i].type)][j] = parseInt(d[i][names[j]]);
+					}
 		});
 		d3.csv("data/beijing/beijing_extra_"+s+".csv", function(d)
 		{
@@ -89,7 +94,10 @@ function initialize()
 			for(var i=0;i<d.length;i++)
 				if(pollution.indexOf(d[i].type) > -1)
 					for(var j=0;j<35;j++)
-						data[t][parseInt(d[i].hour)][pollution.indexOf(d[i].type)][j] = parseInt(d[i][names[j]]);
+					{
+						if(d[i][names[j]]!="")
+							data[t][parseInt(d[i].hour)][pollution.indexOf(d[i].type)][j] = parseInt(d[i][names[j]]);
+					}
 		});
 		day++;
 		if(day > days[month])
