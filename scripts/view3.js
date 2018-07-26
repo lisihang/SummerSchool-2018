@@ -16,7 +16,7 @@ var view3 =
 		});
 
 		var wid = $("#view3-svg").width()/365;
-		var sty = $("#view3-svg").height()*0.3;
+		var sty = $("#view3-svg").height()*0.2;
 
 		svg.selectAll("g")
 		.data(data)
@@ -97,16 +97,19 @@ var view3 =
 		var slider = d3.slider()
 		.min(0)
 		.max(364)
-		.value([0, 364])
+		.value([0, 3])
 		.on("slide", function(evt, value)
 		{
 			startyear = parseInt(value[0]);
 			endyear = parseInt(value[1]);
 			view3.update();
+			view2.reset();
 		});
 
 		d3.select("#view3-slider")
 		.call(slider);
+
+		view3.update();
 	},
 	update:function()
 	{

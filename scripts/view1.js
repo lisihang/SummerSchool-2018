@@ -15,8 +15,8 @@ var view1 =
 			return $("#view1-svg").width();
 		});
 		var projection = d3.geo.mercator()
-		.center([116.46, 40.25])
-		.scale(14000)
+		.center([116.46, 40.26])
+		.scale(14500)
 		.translate([svg.style('width').replace("px", "") / 2, svg.style('height').replace("px", "") / 2]);
 
 		var path = d3.geo.path().projection(projection);
@@ -64,15 +64,18 @@ var view1 =
 				{
 					selected[i] = false;
 					d3.select("#view1-svg-circle-" + i)
-					.attr("stroke-width", 0);
+					.attr("stroke-width", 0)
+					.attr("r", 3);
 				}
 				else
 				{
 					selected[i] = true;
 					d3.select("#view1-svg-circle-" + i)
-					.attr("stroke", "yellow")
-					.attr("stroke-width", 2);
+					.attr("stroke", "red")
+					.attr("stroke-width", 2)
+					.attr("r", 4);
 				}
+				view2.updateSelected();
 			});
 		});
 	},

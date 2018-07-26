@@ -2,7 +2,8 @@ var pos;
 var selected;
 var data;
 var startyear = 0;
-var endyear = 364;
+var endyear = 3;
+var ll=0,rr=1;
 var days = new Array();
 days[1] = 31;
 days[2] = 28;
@@ -17,7 +18,7 @@ days[10] = 31;
 days[11] = 30;
 days[12] = 31;
 var names = new Array("东四","天坛","官园","万寿西宫","奥体中心","农展馆","万柳","北部新区","植物园","丰台花园","云岗","古城","房山","大兴","亦庄","通州","顺义","昌平","门头沟","平谷","怀柔","密云","延庆","定陵","八达岭","密云水库","东高村","永乐店","榆垡","琉璃河","前门","永定门内","西直门北","南三环","东四环");
-var pollution = new Array("PM2.5","PM10","AQI","SO2","NO2","03","CO");
+var pollution = new Array("PM2.5","PM10","AQI","SO2","NO2","O3","CO");
 function print(s)
 {
 	console.log(s);

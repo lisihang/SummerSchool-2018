@@ -12,12 +12,12 @@
 	top: 10px;
 	bottom: 25%;
 	left: 40%;
-	right: 0;
+	right: 10px;
 }
 #view3
 {
 	position: absolute;
-	top: 70%;
+	top: 75%;
 	bottom: 0px;
 	left: 10px;
 	right: 10px;
@@ -34,7 +34,7 @@
 {
 	position: absolute;
 	top: 0px;
-	bottom: 0px;
+	bottom: 5%;
 	left: 0px;
 	right: 0px;
 }
@@ -46,11 +46,31 @@
 	left: 0px;
 	right: 0px;
 }
+#view2-slider
+{
+	position: absolute;
+	top: 95%;
+	bottom: 0px;
+	left: 10%;
+	right: 10px;
+}
 #view3-slider
 {
 	position: absolute;
-	top: 20%;
+	top: 10px;
 	bottom: 0px;
 	left: 10px;
 	right: 10px;
 }
+
+
+.axis path,
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
