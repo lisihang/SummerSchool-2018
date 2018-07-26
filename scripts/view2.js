@@ -139,7 +139,10 @@ var view2 =
 				return s;
 			})
 			.attr("fill-opacity", 0)
-			.attr("stroke", "black")
+			.attr("stroke", function(d, i)
+			{
+				return color(i);
+			})
 			.attr("stroke-width", 1.5)
 			.attr("stroke-opacity", 0);
 		}
@@ -174,7 +177,7 @@ var view2 =
 	update:function()
 	{
 		var svg = d3.select("#view2-svg").select("svg");
-		var hei = $("#view2-svg").height() / 7;
+		var hei = $("#view2-svg").height() * 0.99 / 7;
 		var scale = this.scale;
 		svg.selectAll(".view2-svg-line").remove();
 		for(var k=0;k<7;k++)
@@ -239,7 +242,10 @@ var view2 =
 				return s;
 			})
 			.attr("fill-opacity", 0)
-			.attr("stroke", "black")
+			.attr("stroke", function(d, i)
+			{
+				return color(i);
+			})
 			.attr("stroke-width", 1.5)
 			.attr("stroke-opacity", function(d, i)
 			{
